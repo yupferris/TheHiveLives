@@ -16,7 +16,7 @@ sed -i -e '$i \/home/pi/Hive/HiveServer/deploy/start-pi.sh /home/pi/Hive\n' /etc
 
 # Speed up boot time and remove rpi logo
 printf '#yolo\nforce_turbo=1\n' >> /boot/config.txt
-printf 'loglevel=0 logo.nologo' >> /boot/cmdline.txt
+sed -i '1 s/$/ loglevel=0 logo.nologo/' /boot/cmdline.txt
 
 # Reboot to test
 reboot
