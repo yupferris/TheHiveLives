@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Install mono
-apt-get -y install mono-complete
-
 # Clone Hive repo and checkout server branch
 git clone https://github.com/yupferris/Hive.git
 cd Hive
@@ -10,6 +7,9 @@ git submodule init
 git submodule update
 git checkout feature-HiveServer
 cd ..
+
+# Install mono
+apt-get -y install mono-runtime
 
 # Start Hive on reboot
 sed -i -e '$i \/home/pi/Hive/HiveServer/deploy/start-pi.sh /home/pi/Hive\n' /etc/rc.local
