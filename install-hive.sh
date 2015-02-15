@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install mono
-apt-get install mono-complete
+apt-get -y install mono-complete
 
 # Clone Hive repo and checkout server branch
 git clone https://github.com/yupferris/Hive.git
