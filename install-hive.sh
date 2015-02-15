@@ -9,7 +9,7 @@ git checkout feature-HiveServer
 cd ..
 
 # Install mono
-apt-get -y install mono-runtime
+apt-get -y install mono-complete
 
 # Start Hive on reboot
 sed -i -e '$i \/home/pi/Hive/HiveServer/deploy/start-pi.sh /home/pi/Hive\n' /etc/rc.local
