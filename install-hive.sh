@@ -1,11 +1,10 @@
 #!/bin/bash
 
-# Clone Hive repo and checkout server branch
+# Clone Hive repo
 git clone https://github.com/yupferris/Hive.git
 cd Hive
 git submodule init
 git submodule update
-git checkout feature-HiveServer
 cd ..
 
 # Install mono
