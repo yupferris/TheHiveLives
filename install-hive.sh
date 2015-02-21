@@ -10,6 +10,10 @@ cd ..
 # Install mono
 apt-get -y install mono-complete
 
+# Set performance scaling governors for all cpu's on reboot
+apt-get -y install cpufrequtils
+sed -i 's/^GOVERNOR=.*/GOVERNOR="performance"/' /etc/init.d/cpufrequtils
+
 # Start Hive on reboot
 sed -i -e '$i \/home/pi/Hive/HiveServer/deploy/start-pi.sh /home/pi/Hive\n' /etc/rc.local
 
