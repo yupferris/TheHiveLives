@@ -7,8 +7,9 @@ git submodule init
 git submodule update
 cd ..
 
-# Install mono
-apt-get -y install mono-complete
+# Install mono and Rx libraries
+apt-get -y install mono-runtime
+apt-get -y install libmono-system-reactive-*
 
 # Set performance scaling governors for all cpu's on reboot
 apt-get -y install cpufrequtils
